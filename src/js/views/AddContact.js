@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const AddContact = () => {
 	const { store, actions } = useContext(Context);
 	const [userInput, setUserInput] = useState({
-		name: "",
+		full_name: "",
 		address: "",
 		phone: "",
 		email: ""
@@ -22,9 +22,9 @@ export const AddContact = () => {
 							type="text"
 							className="form-control"
 							placeholder="Full Name"
-							value={userInput.name}
+							value={userInput.full_name}
 							onChange={e => {
-								setUserInput({ ...userInput, name: e.target.value });
+								setUserInput({ ...userInput, full_name: e.target.value });
 							}}
 						/>
 					</div>
